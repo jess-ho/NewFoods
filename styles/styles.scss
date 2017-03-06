@@ -1,0 +1,1065 @@
+@import 'setup';
+@import 'default';
+
+
+/* =========================================================================================================
+HOME PAGE
+========================================================================================================= */
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+MAIN SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+main.home-page {
+	background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/hero_01.jpg');
+	background-position: center;
+	background-size: cover;
+	margin: 0;
+
+	width: 100%;
+	height: 110vh;
+	position: relative;
+	padding-top: 20px;
+	text-transform: uppercase;
+
+	nav li a {
+		color: white;
+	}
+}
+
+/* -- header styles for all 3 pages -- */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li a {
+	position: relative;
+	margin: 0 25px 0 0;
+	font-size: 13px;
+	padding: 2px;
+}
+
+nav ul li:last-child a {
+	margin: 0;
+}
+
+/* -- navigation underline on hover -- */
+nav li a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background: #A52522;
+	transform: scaleX(0);
+	transition: all .3s ease-out;
+}
+
+nav li a:hover::before {
+	transform: scaleX(1);
+}
+
+/* -- social buttons in header -- */
+.header-social a i {
+	color: black;
+	font-size: 15px;
+	margin-left: 15px;
+	transition: all .3s ease-out;
+
+	&:hover {
+		color: lightgray;
+	}
+}
+
+/* -- language options in header -- */
+div.language {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-left: 15px;
+	font-family: "Montserrat";
+	color: lightgray;
+
+	a {
+		color: lightgray;
+		position: relative;
+		font-size: 10px;
+		transition: all .3s ease-out;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+/* -- language options underline hover -- */
+div.language a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: lightgray;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .3s ease-out;
+}
+
+div.language a:hover::before {
+	transform: scaleX(1);
+	color: white;
+}
+
+
+/* -- section with logo centered in main -- */
+.learn-more {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+
+		/* -- logo + caption -- */
+		.logo2 {
+		transform: scale(.9);
+	}
+
+	p {
+		margin: 0;
+		font-size: 19px;
+		position: relative;
+		bottom: 20px;
+		letter-spacing: 2px;
+	}
+}
+
+.home-page .learn-more p {
+	font-size: 19px;
+}
+
+/* -- learn more, reservation now buttons -- */
+.learn-more-button {
+	border: 1px solid #A52522;
+	border-radius: 40px;
+	padding: 11px 0;
+	letter-spacing: 1px;
+	font-size: 13px;
+	text-transform: uppercase;
+	transition: all .3s ease-out;
+
+	a {
+		padding: 11px 23px;
+		transition: all .3s ease-out;
+	}
+}
+
+/* -- reservation now button -- */
+main .learn-more-button {
+	position: absolute;
+	background: #A52522;
+	top: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&:hover {
+		background: white;
+		border: 1px solid #A52522;
+		font-weight: bold;
+
+		/* -- styling anchor separately because I have to -- */
+		& a {
+			color: #A52522;
+		}
+	}
+}
+
+/* -- arrow in main section that scrolls to next section -- */
+.down {
+	position: absolute;
+	left: 50%;
+	top: 180%;
+	transform: translateX(-50%);
+
+	a i {
+		font-size: 23px;
+		color: lightgray;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+/* -- not-so-fancy page section teleporter -- */
+div.fancy-scroll {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	// bottom: 0;
+	padding-right: 50px;
+	z-index: 99;
+
+	i {
+		display: block;
+		margin: 10px;
+		font-size: 11px;
+		color: lightgray;
+		// border: 1px solid lightgray;
+		border-radius: 50%;
+		// text-decoration: line-through;
+	}
+}
+
+div.fancy-scroll a:hover i {
+	transform: scale(1.3);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+ABOUT SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+/* -- WRAPPER STYLING FOR WRAPPERS -- */
+.wrapper {
+	width: 65%;
+	margin: 0 auto;
+}
+
+/* -- div around the images, also has class of wrapper -- */
+div.popout {
+	position: relative;
+	transform: scale(1.1);
+	background: white;
+	// box-shadow: 1px 0 30px gray;
+}
+
+/* -- two rows with floated divs, rows are clearfixed -- */
+div.about-row1 div, div.about-row2 div {
+	float: left;
+}
+
+section.about div.popout img {
+	width: 100%;
+	height: 250px;
+	display: block;
+}
+
+/* -- aka first column in each row -- */
+.row-first {
+	width: 40%;
+}
+
+/* -- aka second column in each row -- */
+.row-second {
+	width: 60%;
+}
+
+section.about h2{
+		color: black;
+		display: inline-block; //for the border-bottom
+		font-family: "Playfair Display";
+		font-size: 28px;
+		letter-spacing: 2px;
+		border-bottom: 4px solid lightgray;
+		margin-bottom: 0;
+		margin-top: 30px;
+		text-transform: uppercase;
+}
+
+section.about p {
+	color: gray;
+	padding: 0 10px;
+	font-size: 11px;
+	letter-spacing: 1px;
+	line-height: 22px;
+	margin: 16px;
+	font-family: "Poppins";
+}
+
+/* -- learn more buttons + hover state -- */
+section.about .learn-more-button {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 20px;
+
+	a {
+		color: #A52522;
+		font-weight: bold;
+		font-size: 11px;
+	}
+}
+
+section.about .learn-more-button:hover {
+	background: #A52522;
+	transition: all 0.3s;
+	border: 1px solid transparent;
+
+	& a {
+		color: white;
+		font-weight: normal;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+SPECIAL SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+section.special {
+	background-image: url('../assets/pinapple_row.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 100px 60px;
+
+	h2 {
+		margin-top: 0;
+		font-weight: 300;
+	}
+}
+
+.special-button {
+	background: rgba(180, 182, 182, 0.5);
+	padding: 90px 0 50px 0;
+	text-transform: uppercase;
+
+	img {
+		display: inline-block;
+		transform: scale(0.8);
+	}
+
+	p {
+		margin: 0;
+		font-size: 30px;
+		letter-spacing: 3px;
+	}
+}
+
+.special-button a {
+	width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+MENU SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+.menu {
+	background: #F6F4F1;
+
+	/* -- transparent background overrides the other popout background -- */
+	.popout {
+		background: transparent;
+	}
+}
+
+.menu-row1, .menu-row2 {
+	height: 250px;
+}
+
+.menu-row2 {
+	padding-top: 15px;
+}
+
+/* -- calc the width and height to fit objects perfectly -- */
+.menu-img {
+	float: left;
+	width: calc(50% - 15px);
+	height: calc(250px - 15px);
+	overflow: hidden;
+
+	&:first-child {
+		margin-right: 15px;
+	}
+
+	&:last-child {
+		margin-left: 15px;
+		float: right;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.menu-row2 > div:first-child img {
+	top: -30px;
+	position: relative;
+}
+
+.menu-row2 > div:last-child img {
+	top: -150px;
+	position: relative;
+	// transform: rotateY(180deg);
+}
+
+.menu-button-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(165, 37, 34, 0.8);
+	border-radius: 50%;
+	width: 190px;
+	height: 190px;
+	z-index: 99;
+	text-transform: uppercase;
+	font-family: "Poppins";
+
+	a {
+		display: block;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+/* -- tried pseudo element. use container div next time -- */
+.menu-button {
+	height: 170px;
+	width: 170px;
+	border-radius: 50%;
+	background: rgb(165, 37, 34);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	padding: 50px 30px;
+	transition: all .3s ease-out;
+
+	&:hover {
+		height: 190px;
+		width: 190px;
+	}
+}
+
+.menu-button h2 {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+
+	img {
+		width: 100%;
+		transform: scale(0.9);
+		margin-top: 5px;
+	}
+}
+
+p.view {
+	display: inline-block;
+	font-size: 10px;
+	letter-spacing: 1px;
+	border-bottom: 1px solid white;
+
+	& + img {
+		position: relative;
+		top: -3px;
+		left: 50%;
+		transform: translateX(-50%) scale(0.8, 0.7);
+		display: block;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+BLEND SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+section.special-blend {
+	background-image: url("../assets/berry_pie.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; //change background size
+	padding: 100px 60px;
+
+	h2 {
+		margin-top: 0;
+		font-weight: 300;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+CONTACT SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+section.contact {
+	padding-top: 50px;
+}
+
+/* -- blockquote section -- */
+blockquote {
+	border: 1px solid #A52522;
+	text-align: left;
+	color: black;
+	padding: 40px 80px;
+	font-family: "Poppins";
+
+	i.fa.fa-quote-left {
+		font-size: 50px;
+		color: lightgray;
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		padding: 10px;
+		transform: translateY(-50%);
+		display: inline-block;
+	}
+}
+
+div.quote {
+	float: right;
+	width: 90%;
+	position: relative;
+	line-height: 25px;
+
+	p:nth-of-type(2) {
+		font-size: 11px;
+		padding-left: 20px;
+		color: darkgray;
+		line-height: 16px;
+		position: relative;
+
+		/* -- signature line -- */
+		&::before {
+			content: "";
+			width: 10px;
+			border: 1px solid gray;
+			// height: 1px;
+			position: absolute;
+			top: 8px;
+			left: 0;
+		}
+	}
+}
+
+/* -- three dots on the bottom -- */
+.quote-scroll {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 60px;
+	padding-bottom: 15px;
+
+	i {
+		font-size: 5px;
+		margin: 5px;
+		color: lightgray;
+
+		&:first-child {
+			color: black;
+		}
+	}
+}
+
+/* -- INNER WRAPPER FOR INNER WRAPPING -- */
+.inner-wrapper {
+	width: 45%;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* -- email subscription -- */
+div.subscription {
+	background-image: url("../assets/wine.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0% 75%;
+	padding: 110px;
+	text-align: left;
+	margin-top: 50px;
+
+	input {
+		display: block;
+		width: 100%;
+		padding: 6px;
+		font-size: 12px;
+	}
+
+	label p {
+		font-size: 12px;
+	}
+
+	p {
+		font-size: 10px;
+		text-transform: none;
+	}
+}
+
+/* -- random submit in input that goes nowhere -- */
+.email-submit {
+	color: black;
+	position: absolute;
+	right: 10px;
+	top: 55%;
+	transform: translateY(-50%);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+FOOTER SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+footer {
+	background-image: url("../assets/footer_bg_02.jpg");
+	background-repeat: no-repeat;
+	padding-top: 70px;
+	position: relative;
+}
+
+/* -- link to top of the page -- */
+a.to-the-top {
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, -50%);
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+div.location, div.hours {
+	float: left;
+	width: 50%;
+	text-align: left;
+	margin-bottom: 70px;
+	font-family: "Poppins";
+	color: lightgray;
+	font-weight: 300;
+	font-size: 14px;
+
+	h3 {
+		font-weight: 300;
+		margin: 30px 0;
+		letter-spacing: 1px;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+}
+
+div.location {
+	padding-left: 10%;
+
+	address {
+		float: left;
+		font-style: normal;
+		line-height: 1.4rem;
+		margin-right: 15px;
+	}
+}
+
+div.hours p {
+	float: left;
+	margin-right: 20px;
+	margin: 0 25px 0 0;
+	line-height: 1.4rem;
+}
+
+div.endnote {
+	background: #1C1A1C;
+	padding: 15px;
+	clear: both;
+	text-transform: uppercase;
+	color: gray;
+	font-family: "Poppins";
+	font-size: 11px;
+	letter-spacing: 2px;
+
+	p {
+		float: left;
+		width: 50%;
+	}
+}
+
+
+
+/* =========================================================================================================
+ABOUT PAGE
+========================================================================================================= */
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+MAIN SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+main {
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	height: 80vh;
+	background-repeat: no-repeat;
+}
+
+main.about-page {
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../assets/hero_02.jpg");
+	background-position: 0% 20%;
+	background-size: cover;
+}
+
+main.about-page header, main.blog-page header {
+	background: white;
+	width: 100%;
+}
+
+nav li a {
+	color: black;
+}
+
+.about-page .learn-more p {
+	margin-top: 30px;
+	font-size: 13px;
+}
+
+.header-social.clearfix > a {
+	float: left;
+}
+
+/* -- making language options and social options next to each other -- */
+.about-page .language, .blog-page .language {
+	position: static;
+	float: left;
+
+	& a:hover {
+		color: black;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+ARTICLE SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+section article h3, section article p {
+	color: black;
+	font-family: "Poppins";
+	text-align: left;
+}
+
+section article.inner-wrapper {
+	margin: 80px auto;
+}
+
+article p {
+	font-size: 14px;
+	padding-left: 25px;
+	line-height: 25px;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+
+section article p:nth-of-type(1) {
+	font-style: italic;
+}
+
+.question {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+article h3 {
+	font-size: 35px;
+	position: relative;
+	line-height: 50px;
+	padding-top: 28px;
+	text-transform: uppercase;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-top: 6px solid rgb(165, 37, 34);
+		width: 53px;
+		top: 0;
+	}
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+FIGURE SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+section.figure {
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 100vh;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	font-family: "Poppins";
+	letter-spacing: 1px;
+}
+
+.figure.figure-about {
+	background-image: url("../assets/chef.jpg");
+}
+
+.figure div.outer-box {
+	background: rgba(151,133,141,0.6);
+	width: 350px;
+	padding: 20px 0 30px 0;
+	position: relative;
+	top: 40%;
+	left: 60%;
+
+	.inner-box {
+		background: rgba(151,133,141,1);
+		width: 100%;
+		padding: 30px 30px;
+	}
+}
+
+.inner-box h3 {
+	margin: 0 0 20px 0;
+	padding-bottom: 14px;
+	position: relative;
+	letter-spacing: 2px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 50px;
+		border: 2px solid white;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	& > p {
+		margin: 10px 0 0 0;
+		text-transform: uppercase;
+	}
+
+	& p:first-child {
+		text-transform: none;
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+}
+
+.inner-box h3 span {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.inner-box > p {
+	font-size: 13px;
+	line-height: 22px;
+	text-align: left;
+}
+
+
+
+/* =========================================================================================================
+BLOG PAGE
+========================================================================================================= */
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+MAIN SECTION
+--------------------------------------------------------------------------------------------------------- */
+main.blog-page {
+	background: url("../assets/blog_hero.jpg");
+	background-size: cover;
+}
+
+.blog-page .learn-more p {
+	font-size: 16px;
+	letter-spacing: 0;
+	font-family: "Poppins";
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+GALLERY SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+.gallery-sect {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.gallery-nav {
+	width: 100%;
+	background: #B44A47;
+}
+
+.gallery-inner-nav {
+	width: 70%;
+	margin: 0 auto;
+	padding: 8px 0;
+	text-transform: uppercase;
+
+	p, select {
+		float: left;
+		font-size: 14px;
+		font-family: "Poppins";
+		letter-spacing: 1px;
+		color: white;
+	}
+
+	a {
+		padding: 8px 14px;
+		border: 2px solid white;
+		float: right;
+		font-size: 14px;
+		font-family: "Poppins";
+		position: relative;
+		top: 6px;
+		transition: all .3s ease-out;
+
+		&:hover {
+			background: white;
+			color: #B44A47;
+			font-weight: bold;
+		}
+	}
+}
+
+select {
+	background: #B44A47;
+	border-color: #B44A47;
+	border-bottom: 1px solid white;
+	padding-right: 50px;
+	margin: 10px 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: all .3s ease-out;
+
+	&:hover, &:focus {
+		background: white;
+		color: #B44A47;
+	}
+
+	option {
+		background: white;
+		color: #B44A47;
+	}
+}
+
+/* -- gallery -- */
+
+.gallery-list {
+	padding: 20px 10px;
+	color: black;
+}
+
+.gallery-row1, .gallery-row2 {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.gallery-row2 > div, .gallery-row1 > div {
+	float: left;
+	width: calc(33.33% - 20px);
+	margin: 0 10px;
+	border: 1px solid lightgray;
+	cursor: pointer;
+
+	figure {
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 150px;
+
+		img {
+			position: relative;
+			max-width: 100%;
+		}
+	}
+}
+
+.gallery-row1 > div:last-child img {
+	top: 0;
+}
+
+.gallery-row1 img {
+	top: -100px;
+}
+
+/* -- image captions -- */
+figcaption {
+	padding: 15px;
+}
+
+.gallery-list figcaption > p {
+	font-weight: bold;
+	font-family: "Poppins";
+	text-align: left;
+	padding: 20px 0 10px 5px;
+	font-size: 14px;
+	line-height: 22px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 30px;
+		border: 1px solid rgb(165, 37, 34);
+		top: 0;
+		left: 0;
+	}
+}
+
+figcaption div p {
+	float: left;
+	font-size: 10px;
+	text-align: left;
+
+	&:last-child {
+		float: right;
+	}
+}
+
+/* -- load more button -- */
+.gallery-sect .gallery > a:last-child {
+	color: black;
+	border: 1px solid rgb(165, 37, 34);
+	padding: 10px 20px;
+	font-family: "Poppins";
+	font-size: 13px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all .3s ease-out;
+
+	&:hover {
+		background: rgb(165, 37, 34);
+		color: white;
+		font-weight: normal;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+FIGURE SECTION
+--------------------------------------------------------------------------------------------------------- */
+
+.figure.figure-blog {
+	background-image: url("../assets/wine.jpg");
+	margin-bottom: 5vh;
+}

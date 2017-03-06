@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tester</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/styles.css">
+
+	<style>
+
+	.menu {
+		background: #F6F4F1;
+
+		.popout {
+			background: transparent;
+			height: 500px;
+		}
+	}
+
+	.menu-row1, .menu-row2 {
+		height: 250px;
+	}
+
+	.menu-row2 {
+		padding-top: 15px;
+	}
+
+	.menu-img {
+		float: left;
+		width: calc(50% - 15px);
+		height: calc(250px - 15px);
+		overflow: hidden;
+
+		&:first-child {
+			margin-right: 15px;
+		}
+
+		&:last-child {
+			margin-left: 15px;
+			float: right;
+		}
+
+		img {
+			width: 100%;
+			// object-position: center center;
+		}
+	}
+
+	.menu-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(165, 37, 34, 0.8);
+		border-radius: 50%;
+		width: 190px;
+		height: 190px;
+		z-index: 99;
+		padding: 30px;
+
+		a {
+			display: block;
+		}
+
+		img {
+			position: relative;
+			left: 50%;
+			transform: scale(0.8) translateX(-50%);
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.menu-button::before {
+		content: "";
+		height: 170px;
+		width: 170px;
+		border-radius: 50%;
+		background: rgb(165, 37, 34); //rgba doesn't work with before pseudo elements??!?!?!?!?!?!?!
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	.menu-button h2 {
+		margin: 0;
+		font-size: 14px;
+		border: 1px solid green;
+
+		img {
+			// width: 100%;
+			border: 1px solid red;
+		}
+	}
+
+	p.view {
+		text-decoration: underline;
+	}
+
+	</style>
+</head>
+<body>
+	<section class="menu" id="menu">
+		<div class="wrapper popout">
+			<div class="menu-row1 clearfix">
+				<div class="menu-img">
+				<img src="assets/red_pie.jpg" alt="Two berry pies"></div>
+				<div class="menu-img">
+				<img src="assets/baguette.jpg" alt="Baguette with ham"></div>
+			</div>
+			<div class="menu-row2 clearfix">
+				<div class="menu-img">
+				<img src="assets/flatbread.jpg" alt="Flatbread with fruit"></div>
+				<div class="menu-img">
+				<img src="assets/three_pies.jpg" alt="Three apple pies"></div>
+			</div>
+
+			<a href="">
+				<div class="menu-button">
+					<h2>
+						<p>Discover</p>
+						<img src="assets/heading_menu.png" alt="Menu">
+					</h2>
+					<p class="view">View All</p>
+					<img src="assets/rib.png" alt="">
+				</div>
+			</a>
+
+		</div>
+	</section>
+</body>
+</html>
